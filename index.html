@@ -23,6 +23,11 @@
             justify-content: center;
             align-items: center;
             gap: 1.25rem;
+            transition: all 0.3s ease-in-out;
+        }
+        body:hover {
+            background-color: #ff0000;
+            color: #ffffff;
         }
         .content {
             font-weight: 900;
@@ -42,5 +47,15 @@
     <div class="content2">
         Full Power!
     </div>
+    <script>
+        document.body.addEventListener('mouseover', function() {
+            document.querySelector('.content').textContent = '不要摸鱼!';
+            document.querySelector('.content2').textContent = 'No Fish!';
+        });
+        document.body.addEventListener('mouseout', function() {
+            document.querySelector('.content').textContent = '码力全开!';
+            document.querySelector('.content2').textContent = 'Full Power!';
+        });
+    </script>
 </body>
 </html>
